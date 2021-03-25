@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>itZzenXX | You do you, I don't mind</title>
+	<link rel="icon" href="images/kannapillow.png" type="image/x-icon"/>
+        <link rel="stylesheet" type="text/css" href="colors.css">
+</head>
+<body>
+	<div class="content1">
+		<img src="images/kannapillow.png" width="100" height="100"/>
+		<h1>itZzen's Website!</h1>		
+		<p><i>You do you, I don't mind</i></p>
+	</div>
+	<div class="headertext">
+		<a href="/">home</a>&ensp;&ensp;
+		<a href="/aboutme">about me</a>&ensp;&ensp;
+		<a href="/downloads">downloads</a>&ensp;&ensp;
+		<a href="/mirrors">mirrors</a>&ensp;&ensp;
+	</div>
+<br>
+	<div class="content2">
+		<h2>Hello, and welcome to my very own personal website!</h2>
+		<p>Welcome to itZzen.net! A place of... not much really XP. If you are viewing this website, high change I personally gave you a .onion address since optimum likes to be a peice of garbage and wont let me port foward >:/</p>
+		<p>This website will probably just be for me to test around with CSS and HTML, but I will also host services, guides, downloads, and other things that I feel like doing :D</p> 
+		<p>This is my very first website and I know barely anything about CSS and HTML so the source html code may be a bit messy @_@</p>
+		<a href="/link">Link this website!</a>
+		<a href="/sources">Website sources!</a>
+<br><br>
+		<img src="images/tenor.gif.2" width="450" />
+	</div>
+<br>
+	<div class="content2">
+        <h2>Socials:</h2>
+		<img src="images/pleroma.png" width="20" />
+		<a href="https://pleroma.envs.net/itZzenXX">Pleroma: pleroma.envs.net/itZzenXX</a>
+	<br><br>
+		<img src="images/animated.gif" width="25" />
+		<a href="https://escargot.log1p.xyz/get-started">MSN: escargotmsn.preinvestigator@aleeas.com</a>
+	<br><br>
+		<img src="images/xmpp.png" width="20" />
+		<a>XMPP: itzzen@kalicodes.ml</a>
+	<br>
+	<h2>Donations:</h2>
+		<img src="images/eth.png" width="20" />
+		<a>Ethereum: 0xae50717eee60ced9fc584ad334c7f3d1eea6414f</a> 
+	<br><br>
+		<img src="images/bitcoin.png" width="20" />
+		<a>Bitcoin: </a>
+	<br><br>
+		<img src="images/monero.png" width="20" />
+		<a>Monero: </a>
+	<br><br>
+		<img src="images/doge.png" width="20" />
+		<a>Doge: </a>
+	<br><br>
+		<img src="images/tenor.gif.1" width="450" />
+	</div>
+<br>
+	<div class="footer1">
+		<a href="https://kernel.org/"><img alt="Penguin powered" src="images/linux_powered.gif"/></a>
+		<a href="https://debian.org/"><img alt="debian powered" src="images/button-2.gif"/></a>
+                <a href="https://www.itzzen.net"><img alt="Visit itZzen.net!" src="images/itZzen.png"</></a>
+                <a href="https://spyware.neocities.org"><img alt="Spyware Watchdog" src="images/spyware.png"></></a>
+		<a href="https://fediverse.network"><img alt="Use the fediverse!" src="images/neo-fedi.gif"</></a>
+                <a href="https://www.vim.org"><img alt="VIM! Hell yeah" src="images/vim.vialle.love.anim.gif"</></a>		
+                <a href="https://kill-9.xyz/harmful/software/systemd"><img alt="Systemd no way!" src="images/systemd.gif"</></a>
+		<a href="https://www.steamcommunity.com/id/itzzenxx"><img alt="Add me on steam!" src="images/steam.gif"</></a>
+		<a href="https://spyware.neocities.org/articles/discord.html"><img alt="Discord No way!" src="images/discord-no-way-2.gif"/></a>
+		<p>rm -rf --no-preserve-root /*</p>
+                <noscript><p>Java script is disabled!</p></noscript>
+        </div>
+</body>
+</html>
