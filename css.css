@@ -28,15 +28,15 @@ p{
 }
 
 a:hover{
-	color:#094561;
+	color:#006b9f;
 }
 
 a:link{
-	color:#0000ff;
+	color:#006b9f;
 }
 
 a:active{
-	color:#006b9f;
+	color:#ff0000;
 }
 
 a:visited{
