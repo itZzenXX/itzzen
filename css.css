@@ -24,7 +24,7 @@ p{
 }
 
 :target a{
-	color:#959800;
+	color:#ffc0cb;
 }
 
 a:hover{
@@ -40,11 +40,11 @@ a:active{
 }
 
 a:visited{
-	color:#FF00FF;
+	color:#ffc0cb;
 }
 
 a{
-	color:#006b9f;
+	color:#ffc0cb;
 	font-family:verdana;
 }
 
