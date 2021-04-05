@@ -32,11 +32,11 @@ a:hover{
 }
 
 a:link{
-	color:#006b9f;
+	color:#ff0000;
 }
 
 a:active{
-	color:#ff0000;
+	color:#006b9f;
 }
 
 a:visited{
