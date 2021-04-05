@@ -31,6 +31,18 @@ a:hover{
 	color:#094561;
 }
 
+a:link{
+	color:#0000ff;
+}
+
+a:active{
+	color:#ff0000;
+}
+
+a:visited{
+	color:#FF00FF;
+}
+
 a{
 	color:#006b9f;
 	font-family:verdana;
