@@ -24,15 +24,15 @@ p{
 }
 
 :target a{
-	color:#959800;
+	color:#ffc0cb;
 }
 
 a:link{
 	color:#ffc0cb;
 }
 
-a:visited{
-	color:#FF00FF;
+a:hover{
+	color:#ff748c;
 }
 
 a{
