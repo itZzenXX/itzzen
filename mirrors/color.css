@@ -19,27 +19,19 @@ p{
 }
 
 :target a{
-	color:#959800;
-}
-
-a:hover{
-	color:#094561;
+	color:#ffc0cb;
 }
 
 a:link{
-	color:#0000ff;
+	color:#ffc0cb;
 }
 
-a:active{
-	color:#ff0000;
-}
-
-a:visited{
-	color:#FF00FF;
+a:hover{
+	color:#ff748c;
 }
 
 a{
-	color:#006b9f;
+	color:#ffc0cb;
 	font-family:verdana;
 }
 
