@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>itZzenXX | Migrating to LibreSSL</title>
+</head>
+<body>
+  <h3>Migrating OpenSSL to LibreSSL on Gentoo</h3>
+  <p>This guide will show the steps in how to migrate your system fully to a LibreSSL system instaid of OpenSSL. You may want to do this for several reasons, as LibreSSL is more secure, less bloated, and overall a much better program over OpenSSL.</p>
+  <p>Some questions you may ask about this guide is "Isn't LibreSSL support in gentoo dead?". Yes! <a href="https://www.gentoo.org/support/news-items/2021-01-05-libressl-support-discontinued.html">Gentoo killed off official support in Libressl on 2/01/2021.</a> But you will still want to do this for the reasons I stated above</p>
+  <h3>How do I configure my packages to use LibreSSL?</h3>
+  <p>First, you will need to set some flags in /etc/portage to get packages to compile against it. Firstly, Add these lines in /etc/portage/make.conf:</p>
+  <code>USE="... libressl -openssl ..."</code>
+  <br>
+  <code>curl_ssl="libressl"</code>
+  <p>These lines will allow packages to compile against LibreSSL</p>
+  <p>If you use any package that requires NodeJS as a dependency, you may want to add "-system-ssl" to the list of use flags I stated.</p>
+  <p>Next, add libressl to unstable ebuilds, run these commands as root to make the new rule:</p>
+  <code>mkdir /etc/portage/profile</code>
+  <br>
+  <code>echo "-libressl" >> /etc/portage/profile/use.stable.mask</code>
+  <br>
+  <code>echo "dev-libs/libressl" >> /etc/portage/package.accept_keywords"</code>
+  <h3>How do I install LibreSSL and replace it with OpenSSL?</h3>
+  <p>This step can be a bit tricky if you have already installed your base system and your applications, but you may get lucky. I reccomend to close any applications currently open and to prepare for package blockage.</p>
+  <p>if you are doing this over an SSH connection, please don't as you will need to recompile OpenSSH to use the new LibreSSL library.</p>
+  <p>Open a terminal and type these commands as root to remove OpenSSL from your system:</p>
+  <code>emerge --deselect dev-libs/openssl</code>
+  <br>
+  <code>emerge --unmerge dev-libs/openssl</code>
+  <br>
+  <code>echo "dev-libs/openssl" >> /etc/portage/package.mask</code>
+  <p>Once OpenSSL is removed, now it is time to install LibreSSL. Open a terminal and type these following commands:</p>
+  <code>emerge -f dev-libs/libressl</code>
+  <br>
+  <code>emerge -1q dev-libs/libressl</code>
+  <br>
+  <code>emerge --noreplace dev-libs/libressl</code>
+  <p>When running these commands, you may get an error saying that LibreSSL has been masked and that support has been discontunied, please edit "/var/db/repos/gentoo/profiles/package.mask" and remove "dev-libs/libressl" on line 322 and you will be good to go</p>
+  <h3>How do I recompile all of my apps to use LibreSSL?</h3>
+  <p>As many apps require an SSL library, this may be tricky and will take a long time to finish the entire mirgration.</p>
+  <p>Please run these commands to build all of your new apps against libressl:</p>
+  <code>emerge -1q openssh wget iputils python:3.8</code>
+  <br>
+  <code>emerge -quDN @world</code>
+  <p>If you get any package blockage, chances are that your system may either need patches to get LibreSSL working, or need to change some use flags.</p>
+  <p>If this is a case of use flags, please make a file in /etc/portage/package.use running the commands as root below:</p>
+  <code>mkdir /etc/portage/package.use/</code>
+  <br>
+  <code>echo "*package name* -ssl" >> /etc/portage/package.use/libressl</code>
+  <p>If the package needs patches to get working, like the case with dev-lang/rust, add the libressl overlay to get these patches working:</p>
+  <code>emerge eselect-repository</code>
+  <br>
+  <code>eselect repository enable libressl</code>
+  <br>
+  <code>emaint sync -r libressl</code>
+  <p>Keep on experimenting with this until you are able to update your @world set to use LibreSSL</p>
+  <p>If no errors have occoured in this update, congratulations! you are almost done with migrating to LibreSSL!</p>
+  <p>Last thing is to update your @preserved-rebuild, run this command below as root to update it:</p>
+  <code>emerge @preserved-rebuid</code>
+  <p>And if no errors occured, congratilations, you have succesfully migrated to LibreSSL!</p>
+</body>
+</html>
