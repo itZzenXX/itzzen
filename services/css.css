@@ -1,0 +1,85 @@
+h1{
+        color:pink;
+        font-family:verdana;
+}
+
+h2{
+        color:white;
+        font-family:verdana;
+}
+
+h3{
+	color:pink;
+	font-family:verdana;
+}
+
+h4{
+        color:white;
+        font-family:verdana;
+}
+
+p{
+        color:white;
+        font-family:verdana;
+}
+
+:target a{
+	color:#ffc0cb;
+}
+
+a:link{
+	color:#ffc0cb;
+}
+
+a:hover{
+	color:#ff748c;
+}
+
+a{
+	color:#ffc0cb;
+	font-family:verdana;
+}
+
+body{
+        background-image:url("images/sky.gif");
+	padding:15px;
+	margin:auto;
+	max-width:1200px;
+}
+
+.content1{
+	text-align:center;	
+	background-color:#000000;
+	padding:15px;
+	border: 2px pink solid;
+}
+
+.headertext{
+        background-color:#000000;
+	text-align:center;
+	padding:15px;
+	border-right: 2px pink solid;
+	border-left: 2px pink solid;
+	border-bottom: 2px pink solid;
+}
+
+
+.content2{
+	text-align:center;
+	padding-top:15px;
+	padding-bottom:15px;
+	padding-right:100px;
+        padding-left:100px;
+        border:2px pink solid;
+        background-color:#000000;
+}
+
+.footer1{
+	text-align:center;
+        background-color:#000000;
+	padding-top:15px;
+	padding-bottom:15px;
+	padding-left:100px;
+	padding-right:100px;
+	border:2px pink solid;
+}
