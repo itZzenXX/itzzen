@@ -30,12 +30,13 @@
   <br>
   <code>echo "dev-libs/openssl" >> /etc/portage/package.mask</code>
   <p>Once OpenSSL is removed, now it is time to install LibreSSL. Open a terminal and type these following commands:</p>
+  <p><b>!!!</b> In order to get continued updates for LibreSSL, you may want to consider adding the <a href="https://www.github.com/itzzenxx/zentoo>Zentoo overlay</a></p>
   <code>emerge -f dev-libs/libressl</code>
   <br>
   <code>emerge -1q dev-libs/libressl</code>
   <br>
   <code>emerge --noreplace dev-libs/libressl</code>
-  <p>When running these commands, you may get an error saying that LibreSSL has been masked and that support has been discontinued, please run this command to get the package unmasked:</p>
+  <p><b>!!!</b> When running these commands, you may get an error saying that LibreSSL has been masked and that support has been discontinued, please run this command to get the package unmasked:</p>
   <code>echo "dev-libs/libressl" >> /etc/portage/package.unmask</code>
   <p>If the above command does not work, please edit "/var/db/repos/gentoo/profiles/package.mask" and remove "dev-libs/libressl" on line 322 and you will be good to go</p>
   <h3>How do I recompile all of my apps to use LibreSSL?</h3>
@@ -43,13 +44,14 @@
   <p>Please run these commands to build all of your new apps against libressl:</p>
   <code>emerge -1q openssh wget iputils python:3.8</code>
   <br>
-  <code>emerge -quDN @world</code>
+  <code>emerge -1quDN @world</code>
   <p>If you get any package blockage, chances are that your system may either need patches to get LibreSSL working, or need to change some use flags.</p>
-  <p>If this is a case of use flags, please make a file in /etc/portage/package.use running the commands as root below:</p>
-  <code>mkdir /etc/portage/package.use/</code>
+  <p>If this is due to packages having a use flags that dont play well with a LibreSSL based system, you will want to check the gentoo use flag index to see if the package is attempting to build with use flags that may require an OpenSSL binding, use flags that I have found personally effect a LibreSSL migration are listed below:</p>
+  <code>udisks system-ssl (sometimes) ssl</code>
   <br>
-  <code>echo "*package name* -ssl" >> /etc/portage/package.use/libressl</code>
-  <p>If the package needs patches to get working, like the case with dev-lang/rust, add the libressl overlay to get these patches working:</p>
+  <p>try playing with package.use to make packages build without specific use flags. (package-catagory/package-name -use-flag)</p>
+  <br>
+  <p>If the package needs patches to get working, like the case with some versions dev-lang/rust, add the libressl overlay to get these patches working:</p>
   <code>emerge eselect-repository</code>
   <br>
   <code>eselect repository enable libressl</code>
