@@ -1,3 +1,5 @@
+This repository is archived, please view the up to date repository over on codeberg: https://codeberg.org/itZzenXX/itzzen
+
 # itZzen Website Sources
 Hello! Here is the source code for my website! Because I like things being open, I decided to public my website source code! :D
 
